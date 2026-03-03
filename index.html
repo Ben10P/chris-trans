@@ -377,6 +377,48 @@
                         <div id="formMessage" class="form-message"></div>
                     </form>
 
+                    <script>
+                    function sendToWhatsApp(event) {
+                        event.preventDefault();
+                        
+                        // Récupérer les valeurs du formulaire
+                        const nom = document.getElementById('nom').value;
+                        const email = document.getElementById('email').value;
+                        const telephone = document.getElementById('telephone').value;
+                        const message = document.getElementById('message').value;
+                        const rgpd = document.getElementById('rgpd').checked;
+                        
+                        // Vérification simple
+                        if (!nom || !email || !telephone || !message || !rgpd) {
+                            alert('Veuillez remplir tous les champs');
+                            return;
+                        }
+                        
+                        // Formater le message pour WhatsApp
+                        const texteWhatsApp = `*Nouveau message depuis le site web*%0A%0A` +
+                                            `*Nom:* ${nom}%0A` +
+                                            `*Email:* ${email}%0A` +
+                                            `*Téléphone:* ${telephone}%0A` +
+                                            `*Message:* ${message}`;
+                        
+                        // Ton numéro WhatsApp (format international sans +)
+                        const numeroWhatsApp = '2290161201432'; // À remplacer par ton numéro
+                        
+                        // Créer le lien WhatsApp
+                        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${texteWhatsApp}`;
+                        
+                        // Ouvrir WhatsApp dans un nouvel onglet
+                        window.open(urlWhatsApp, '_blank');
+                        
+                        // Optionnel : message de confirmation
+                        document.getElementById('formMessage').innerHTML = 'Redirection vers WhatsApp...';
+                        document.getElementById('formMessage').className = 'form-message success';
+                        
+                        // Réinitialiser le formulaire (optionnel)
+                        // event.target.reset();
+                    }
+                    </script>
+
                 </div>
                 
                 <div class="contact-info">
