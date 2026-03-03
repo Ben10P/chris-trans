@@ -343,7 +343,8 @@
             
             <div class="contact-container">
                 <div class="contact-form-wrapper">
-                    <form id="contactForm" class="contact-form">
+                    
+                    <form id="contactForm" class="contact-form" onsubmit="sendToWhatsApp(event)">
                         <div class="form-group">
                             <label for="nom"><i class="fas fa-user"></i> Nom complet</label>
                             <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
@@ -370,11 +371,12 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-full">
-                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                            <i class="fas fa-paper-plane"></i> Envoyer sur WhatsApp
                         </button>
                         
                         <div id="formMessage" class="form-message"></div>
                     </form>
+
                 </div>
                 
                 <div class="contact-info">
