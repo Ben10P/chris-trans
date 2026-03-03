@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitaire Benoit • Togo – Bénin – Niger – Burkina Faso</title>
+    
+    <!-- Google Fonts - Typographie moderne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 (gratuit) - pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Notre fichier CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+</head>
+<body>
+    <!-- HEADER avec navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#accueil">
+                    <span class="logo-icon"><i class="fas fa-truck-fast"></i></span>
+                    <span class="logo-text">Chris<span class="logo-highlight">TRANS</span></span>
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#pourquoi" class="nav-link">Pourquoi nous</a></li>
+                    <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary btn-small">
+                    <i class="fas fa-phone-alt"></i> Contactez-nous
+                </a>
+                <button class="mobile-menu-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU MOBILE (caché par défaut) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="#accueil" class="mobile-nav-link">Accueil</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
+            <li><a href="#pourquoi" class="mobile-nav-link">Pourquoi nous</a></li>
+            <li><a href="#temoignages" class="mobile-nav-link">Témoignages</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- 1️⃣ SECTION ACCUEIL / HERO -->
+    <section id="accueil" class="hero">
+         <!-- Slideshow d'images -->
+            <div class="hero-slideshow">
+                <div class="bg-image" style="background-image: url('images/slide1.jpg');"></div>
+                <div class="bg-image" style="background-image: url('images/slide21.jpg');"></div>
+                <div class="bg-image" style="background-image: url('images/slide3.jpg');"></div>
+            </div>
+            
+            <!-- Indicateurs (optionnel) -->
+            <div class="slideshow-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+
+        <div class="hero-bg-overlay"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <!--
+                    <h1 class="hero-title">
+                        Transitaire & Déclarant en Douane<br>
+                        <span class="hero-highlight">Togo ↔ Bénin ↔ Niger ↔ Burkina Faso</span>
+                    </h1>
+                    <p class="hero-slogan">“Votre partenaire fiable pour un transit rapide, sécurisé et conforme à la douane.”</p>
+                    <p class="hero-description">Bienvenue sur notre site ! Nous offrons des services professionnels de transit et de déclaration en douane pour vos marchandises sur tout le corridor ouest-africain. Grâce à notre expérience et connaissance approfondie des frontières, nous assurons un suivi complet et sécurisé de vos opérations.</p>
+                -->
+
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-large">
+                            <i class="fas fa-whatsapp"></i> Contactez-nous dès maintenant
+                        </a>
+                        <a href="#services" class="btn btn-outline btn-large">
+                            <i class="fas fa-arrow-down"></i> Découvrir nos services
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Illustration du corridor en disposition arborescente -->
+                    <div class="corridor-visual">
+                        <div class="corridor-tree">
+                            
+                                <div class="top-branch">
+                                    <div class="country-node togo">
+                                        <span class="fi fi-tg"></span>  <!-- Drapeau Togo format cercle -->
+                                    </div>
+                                </div>
+                                
+                                <!-- Flèche vers le bas Togo → Bénin -->
+                                <div class="vertical-arrow-down">
+                                    <div class="double-arrow vertical">↕</div>
+                                </div>
+                                
+                                <!-- Bénin (hub central) -->
+                                <div class="hub-center">
+                                    <div class="country-node benin">
+                                        <span class="fi fi-bj"></span>  <!-- Bénin -->
+                                    </div>
+                                </div>
+                                
+                                <!-- Trois branches vers Niger, Nigeria, Burkina -->
+                                <div class="bottom-branches">
+                                    <!-- Branche vers Niger -->
+                                    <div class="branch-item">
+                                        <div class="double-arrow vertical">↕</div>
+                                        <div class="country-node niger">
+                                            <span class="fi fi-ne"></span>  <!-- Niger -->
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Branche vers Nigeria (droite) -->
+                                    <div class="branch-item">
+                                        <div class="double-arrow vertical">↕</div>
+                                        <div class="country-node nigeria">
+                                            <span class="fi fi-ng"></span>  <!-- Nigeria -->
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Branche vers Burkina (tout en bas) -->
+                                    <div class="branch-item ">
+                                        <div class="double-arrow vertical">↕</div>
+                                        <div class="country-node burkina">
+                                            <span class="fi fi-bf"></span>  <!-- Burkina Faso -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Légende avec noms en petits -->
+                            <div class="corridor-legend">
+                                <div class="country-names">
+                                    <span>GHANA</span>
+                                    <span>↔</span>
+                                    <span>TOGO</span>
+                                    <span>↔</span>
+                                    <span>BÉNIN</span>
+                                </div>
+                                <div class="country-names branches">
+                                    <span>↳ NIGER</span>
+                                    <span>↳ NIGERIA</span>
+                                    <span>↳ BURKINA FASO</span>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ SECTION SERVICES -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-subtitle">Des solutions complètes pour vos opérations de transit et de douane</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Déclaration en douane</h3>
+                    <p>Préparation et soumission rapide de tous vos documents officiels : factures commerciales, certificats d'origine, licences, USN, attestations.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Transit et logistique</h3>
+                    <p>Suivi complet de vos marchandises du point d'entrée au point de livraison, réduction des délais et optimisation des itinéraires sur le corridor.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Optimisation fiscale</h3>
+                    <p>Conseils personnalisés pour minimiser les coûts, respecter les règles douanières et éviter les retards inutiles aux frontières.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Accompagnement personnalisé</h3>
+                    <p>Support direct, suivi régulier et réponses rapides à vos questions tout au long du processus de transit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ SECTION POURQUOI NOUS CHOISIR -->
+    <section id="pourquoi" class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi nous choisir ?</h2>
+                <p class="section-subtitle">Notre engagement pour votre satisfaction</p>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Expertise terrain</h3>
+                    <p>Connaissance approfondie de la frontière Togo‑Bénin et des procédures douanières de toute la sous-région.</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fiabilité & rapidité</h3>
+                    <p>Vos marchandises arrivent à temps, sans complications ni retards inutiles aux postes frontières.</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication facile</h3>
+                    <p>Contact direct par WhatsApp, téléphone ou email. Réponse rapide à toutes vos demandes.</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sécurité & conformité</h3>
+                    <p>Toutes vos opérations respectent la réglementation en vigueur pour une tranquillité d'esprit totale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ SECTION TÉMOIGNAGES -->
+    <section id="temoignages" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Clients satisfaits</h2>
+                <p class="section-subtitle">Ce qu'ils disent de notre collaboration</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>“Chris Trans : nos véhicules importés circulent sans délai entre Bénin et Togo. Professionnel et fiable !”
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>MIG MOTORS TOGO S.A</strong>
+                        <span>Rue de l'océan Lomé, Togo</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card featured">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>“Service rapide et efficace. Suivi transparent à chaque étape du transit. Je recommande vivement !”
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>AZAR CHEMICAL INDUSTRIES LTD</strong>
+                        <span>Tema, Ghana</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>“Grâce au professionnalisme et à la rapidité de Chris TRANS dans les formalités douanières, les carreaux ACS ‘Made in Benin’ dominent aujourd’hui le marché dans la sous-région.”</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>AFRICAN CERAMICS SOLUTIONS</strong>
+                        <span>Zone industrielle Zè, Bénin</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>“Un accompagnement douanier sans stress. Une équipe à l'écoute et très réactive. Merci !” 
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>HONEST GLOBAL LOGISTICS LTD</strong>
+                        <span>Lagos, Nigéria</span>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- 5️⃣ SECTION CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-nous dès maintenant !</h2>
+                <p class="section-subtitle">Une question ? Un devis ? Nous sommes à votre écoute</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nom"><i class="fas fa-user"></i> Nom complet</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telephone"><i class="fas fa-phone"></i> Téléphone / WhatsApp</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="+229 01 23 45 67" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Votre message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Détaillez votre demande..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="rgpd" name="rgpd" required>
+                            <label for="rgpd">J'accepte que mes données soient traitées pour me recontacter</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3><i class="fas fa-address-card"></i> Coordonnées</h3>
+                    
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp (réponse rapide)</strong>
+                            <a href="https://wa.me/2290161201432">+229 01 61 20 14 32</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:benletransitaire@gmail.com">benletransitaire@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Zone d'intervention</strong>
+                            <span>Togo – Bénin – Niger – Burkina Faso</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-badge">
+                        <i class="fas fa-clock"></i> Réponse sous 24h
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUTON WHATSAPP FLOTTANT (mobile) -->
+    <a href="https://wa.me/2290161201432" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Discuter</span>
+    </a>
+
+    <!-- 6️⃣ FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-truck-fast"></i>
+                    <span>Transitaire Benoit</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+                
+                <p class="footer-copyright">
+                    © 2026 Transitaire Benoit – Tous droits réservés
+                </p>
+                
+                <p class="footer-legal">
+                    Respect des règles douanières en vigueur
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notre fichier JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
